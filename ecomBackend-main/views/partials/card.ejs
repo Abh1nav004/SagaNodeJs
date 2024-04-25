@@ -1,6 +1,6 @@
 <% if(locals.product){ %>
     <div class="card" style="width: 18rem;">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmYX_jAi41wuFf4rKKGq98Et23e66d7tO6fxEfmbAtRA&s" class="card-img-top" alt="productImage">
+        <img src="<%- product.productImageURL %>" class="card-img-top" alt="productImage">
         <div class="card-body">
             <h5 class="card-title">
                 <%= product.productName %>
@@ -9,7 +9,7 @@
                 <%= product.productDescription %>
             </p>
             <p class="card-text">
-                Rs <%= product.productPrice %>
+                $ <%= product.productPrice %>
             </p>
             <button class="btn btn-primary" onclick="buyArticle('<%= product._id %>')">Buy</button>
         </div>
